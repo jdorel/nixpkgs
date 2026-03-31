@@ -1596,8 +1596,9 @@
     "enocean" =
       ps: with ps; [
         aiousbwatcher
+        enocean-async
         pyserial
-      ]; # missing inputs: enocean-async
+      ];
     "enphase_envoy" =
       ps: with ps; [
         pyenphase
@@ -7589,6 +7590,7 @@
     "energyid"
     "energyzero"
     "enigma2"
+    "enocean"
     "enphase_envoy"
     "environment_canada"
     "epic_games_store"
