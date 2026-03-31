@@ -168,10 +168,6 @@ let
   };
 
   extraDisabledTestPaths = {
-    hypontech = [
-      # outdated snapshot
-      "tests/components/hypontech/test_sensor.py::test_sensors"
-    ];
     jellyfin = [
       # AssertionError: assert 'audio/x-flac' == 'audio/flac'
       "tests/components/jellyfin/test_media_source.py::test_resolve"
@@ -204,27 +200,12 @@ let
       # sandbox doesn't grant access to /sys/class/power_supply
       "tests/components/systemmonitor/test_config_flow.py::test_add_and_remove_processes"
     ];
-    trane = [
-      # TraneConfigFlow doesn't support step reauth
-      "tests/components/trane/test_init.py::test_setup_auth_error"
-    ];
-    youtube = [
-      # outdated snapshot
-      "tests/components/youtube/test_sensor.py::test_sensor"
-    ];
   };
 
   extraDisabledTests = {
     conversation = [
       # intent fixture mismatch
       "test_error_no_device_on_floor"
-    ];
-    homewizard = [
-      # Messages don't match expected due to a change in Homewizard's outputs
-      "test_identify_button"
-      "test_number_entities"
-      "test_select_request_error"
-      "test_switch_entities"
     ];
     sensor = [
       # Failed: Translation not found for sensor
