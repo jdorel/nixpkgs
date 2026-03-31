@@ -253,7 +253,7 @@ let
   extraBuildInputs = extraPackages python.pkgs;
 
   # Don't forget to run update-component-packages.py after updating
-  hassVersion = "2026.4.0b5";
+  hassVersion = "2026.4.0b7";
 
 in
 python.pkgs.buildPythonApplication rec {
@@ -274,13 +274,13 @@ python.pkgs.buildPythonApplication rec {
     owner = "home-assistant";
     repo = "core";
     tag = version;
-    hash = "sha256-xX044Cq2sXi93sEM6yFFIUmaUJzkCbtJSTLOLf9tV0E=";
+    hash = "sha256-DGtn2Xqt/rfupbEw6yx+KW/ILT5YF66iHAlUC858d3w=";
   };
 
   # Secondary source is pypi sdist for translations
   sdist = fetchPypi {
     inherit pname version;
-    hash = "sha256-O+8u4j+ng1pYiq6Nmben4TDWk5ygtDKkwNb+ZW32Soc=";
+    hash = "sha256-LQfNo98q+UUTTZXfAtYhbUtLBTB1SGdr76J44sy/tfA=";
   };
 
   build-system = with python.pkgs; [
